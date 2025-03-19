@@ -1,4 +1,109 @@
-img {
-    height: 200px;
-    weight: 200px;
+/* Main container to take full viewport height */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 9rem); /* Adjust based on navbar height */
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Text holder */
+.text-holder {
+    flex: 1;
+    text-align: center;
+    max-width: 40rem;
+    margin-bottom: 7rem;
+}
+
+/* Title and text */
+.text-holder h3 {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.text-holder h1 {
+    font-size: 3rem;
+    color: #042b62;
+    margin: 1rem 0;
+}
+
+.text-holder p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Register button */
+.text-holder button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background-color: #042b62;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.text-holder button:hover {
+    transform: translateY(-5px);
+    background-color: #424649; /* Slightly lighter blue */
+    box-shadow: 0 0 10px rgba(255, 223, 0, 1);
+}
+
+/* Image styling with smooth animation */
+.container img {
+    max-width: 30%;
+    height: auto;
+    flex: 1;
+    margin-bottom: 5rem;
+
+    /* Animations */
+    animation: fadeIn 1.5s ease-out, floatImage 4s ease-in-out infinite;
+    animation-delay: 0s, 1.5s; /* Start floating animation AFTER fade-in ends */
+}
+
+/* Floating effect */
+@keyframes floatImage {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-5px) scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-holder {
+        max-width: 80%;
+        margin-top: -6rem;
+    }
+
+    .container img {
+        max-width: 80%;
+        margin-top: -1.5rem;
+    }
 }
