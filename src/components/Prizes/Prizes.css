@@ -1,0 +1,101 @@
+.prizes-container {
+    padding: 2rem;
+    background-color: #042b62de;
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: gradientPulse 12s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientPulse {
+    0% { background-color: #042b62d4; }
+    50% { background-color: #053a80d4; }
+    100% { background-color: #042b62d4; }
+}
+
+.prizes-title {
+    font-size: 2rem;
+    color: #fef181;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(254, 241, 129, 0.5);
+    animation: glowText 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 5px rgba(254, 241, 129, 0.3); }
+    to { text-shadow: 0 0 12px rgba(254, 241, 129, 0.6); }
+}
+
+.prizes-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.prize-card {
+    background-color: #fef181;
+    color: #042b62;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.prize-card h3 {
+    font-size: 3rem;
+}
+
+.prize-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.prize-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #fef181, #ffda44, #fef181);
+    border-radius: 22px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.prize-card:hover::before {
+    opacity: 0.6;
+    animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.6; }
+}
+
+.first { background-color: rgba(255, 217, 0, 0.8); }
+.second { background-color: rgba(192, 192, 192, 0.8); }
+.third { background-color: rgba(205, 128, 50, 0.8); }
+.special { background-color: rgba(254, 241, 129, 0.8); color: #042b62; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prizes-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .prize-card {
+        width: 90%;
+    }
+}

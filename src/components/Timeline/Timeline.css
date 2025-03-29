@@ -1,0 +1,307 @@
+/* Timeline Container */
+.timeline-container {
+    padding: 2rem;
+    background-color: #042b62de;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clear: both; /* Ensures it doesn't overlap with other floating elements */
+    animation: gradientPulse 8s ease infinite;
+    overflow: hidden;
+  }
+  
+  /* Add a subtle background pulse animation */
+  @keyframes gradientPulse {
+    0% {
+      background-color: #042b62d4;
+    }
+    50% {
+      background-color: #053a80d4;
+    }
+    100% {
+      background-color: #042b62d4;
+    }
+  }
+  
+  /* Add a decorative element that moves across the container */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shine 5s infinite linear;
+    z-index: 1;
+  }
+  
+  @keyframes shine {
+    to {
+      left: 200%;
+    }
+  }
+  
+  /* Title */
+  .timeline-title {
+    font-size: 2rem;
+    color: #fef181;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: glowText 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(254, 241, 129, 0.5);
+  }
+  
+  @keyframes glowText {
+    from {
+      text-shadow: 0 0 5px rgba(254, 241, 129, 0.5);
+    }
+    to {
+      text-shadow: 0 0 15px rgba(254, 241, 129, 0.8), 0 0 20px rgba(254, 241, 129, 0.5);
+    }
+  }
+  
+  /* Scrollable Timeline */
+  .timeline-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #fef181 rgba(4, 43, 98, 0.3);
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100rem;
+    position: relative;
+    z-index: 2;
+    height: 12rem;
+  }
+  
+  .timeline-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .timeline-scroll::-webkit-scrollbar-thumb {
+    background-color: #fef181;
+    border-radius: 10px;
+    animation: pulseScroll 2s infinite alternate;
+  }
+  
+  @keyframes pulseScroll {
+    from {
+      background-color: #fef181;
+    }
+    to {
+      background-color: #ffda44;
+    }
+  }
+  
+  .timeline-scroll::-webkit-scrollbar-track {
+    background: rgba(4, 43, 98, 0.3);
+  }
+  
+  /* Event Card */
+  .timeline-event-card {
+    flex: 0 0 auto;
+    width: auto;
+    height: 9.5rem;
+    background-color: #fef181;
+    color: #042b62;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: relative;
+    overflow: hidden;
+    animation: rotateSlightly 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: calc(var(--card-index, 0) * 0.1s);
+    margin-top: 1rem;
+  }
+  
+  /* Assign animation delay to each card */
+  .timeline-scroll .timeline-event-card:nth-child(1) {
+    --card-index: 1;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(2) {
+    --card-index: 2;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(3) {
+    --card-index: 3;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(4) {
+    --card-index: 4;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(5) {
+    --card-index: 5;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(6) {
+    --card-index: 6;
+  }
+  .timeline-scroll .timeline-event-card:nth-child(7) {
+    --card-index: 7;
+  }
+  
+  @keyframes cardEntrance {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) rotate(-20deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+  
+  /* Add a glowing border effect */
+  .timeline-event-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #fef181, #ffda44, #fef181);
+    z-index: -1;
+    border-radius: 22px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .timeline-event-card:hover {
+    transform: translateY(-5px) rotate(2deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    animation: cardFloat 3s ease infinite;
+  }
+  
+  .timeline-event-card:hover::before {
+    opacity: 1;
+    animation: borderGlow 1.5s linear infinite;
+  }
+  
+  @keyframes borderGlow {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes cardFloat {
+    0% {
+      transform: translateY(-5px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-1deg);
+    }
+    100% {
+      transform: translateY(-5px) rotate(2deg);
+    }
+  }
+  
+  /* Add a flash effect when cards appear */
+  .timeline-event-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 20px;
+    animation: cardFlash 2s ease forwards;
+    animation-delay: calc((var(--card-index, 0) * 0.1s) + 0.5s);
+    pointer-events: none;
+  }
+  
+  @keyframes cardFlash {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Event Time */
+  .timeline-event-time {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #042b62;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Event Description */
+  .timeline-event-description {
+    font-size: 0.9rem;
+    color: #042b62;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .timeline-container {
+      margin-top: 0; /* Remove top margin on small screens */
+      padding-top: 4rem; /* Add padding instead to create space */
+      position: relative; /* Ensure proper stacking */
+      z-index: 1; /* Lower z-index than EventDetails */
+    }
+    .timeline-scroll {
+      flex-direction: column;
+      overflow-x: hidden;
+      max-width: 100%;
+      align-items: center;
+    }
+    .timeline-event-card {
+      width: 90%;
+      margin: 0.5rem auto;
+      animation: rotateSlightly 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+      animation-delay: calc(var(--card-index, 0) * 0.15s);
+    }
+  
+    @keyframes mobileCardEntrance {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px) rotate(-5deg);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+      }
+    }
+  
+    .timeline-event-card:hover {
+      transform: translateY(-5px) rotate(1deg) scale(1.03);
+      animation: mobileCardFloat 0.25s ease infinite;
+    }
+  
+    @keyframes mobileCardFloat {
+      0% {
+        transform: translateY(-5px) rotate(1deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(-1deg);
+      }
+      100% {
+        transform: translateY(-5px) rotate(1deg);
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,120 @@
+.eventdetails-container {
+  min-height: 100vh; /* Changed from fixed height to minimum height */
+  height: auto; /* Allow container to grow as needed */
+  position: relative; /* Establish stacking context */
+  z-index: 2; /* Higher z-index than Timeline */
+  margin-bottom: 2rem; /* Add space at the bottom */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 2rem;
+  height: auto;
+  padding-bottom: 2rem; /* Added padding to create space */
+}
+
+.mission-card {
+  background-color: #042b62;
+  color: white;
+  padding: 2rem 2rem;
+  border-radius: 40px;
+  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+}
+
+.card {
+  width: 30%;
+  height: 60%;
+  padding: 1.5rem;
+  background-color: #dcd0d0;
+  border-radius: 40px;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  color: #04295d;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.event-details {
+  min-height: 19rem;
+  height: auto;
+  background-color: #fefec257; /* Adjust as per your design */
+}
+
+.event-content {
+  min-height: 19rem;
+  height: auto;
+  background-color: #fefec257; /* Adjust as per your design */
+}
+
+/* Countdown Card Styling */
+.countdown-card {
+  width: 40%;
+  min-height: 19rem;
+  height: auto;
+  background-color: #042b62;
+  color: white;
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.countdown span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem; /* Increased padding for more space */
+  }
+
+  .mission.container {
+    margin-bottom: 3rem; /* Add space after mission container */
+  }
+
+  .countdown-card {
+    width: 70%;
+  }
+
+  .countdown {
+    font-size: 1.25rem;
+  }
+  .countdown span {
+    padding: 0.1rem 0.3rem;
+    margin: 0%;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 1.5rem; /* Add space between cards */
+  }
+}
+

@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: calc(100vh - 9rem); /* Adjust based on navbar height */
+    height: calc(100vh - 9rem)=; /* Adjust based on navbar height */
     padding: 2rem;
     gap: 2rem;
 }
@@ -14,7 +14,6 @@
     flex: 1;
     text-align: center;
     max-width: 40rem;
-    margin-bottom: 7rem;
 }
 
 /* Title and text */
@@ -55,6 +54,7 @@
 
 /* Image styling with smooth animation */
 .container img {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
     max-width: 30%;
     height: auto;
     flex: 1;
@@ -71,7 +71,7 @@
         transform: translateY(-5px);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-25px);
     }
     100% {
         transform: translateY(-5px);
@@ -95,6 +95,7 @@
     .container {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     .text-holder {
@@ -103,6 +104,7 @@
     }
 
     .container img {
+        z-index: -1;
         max-width: 80%;
         margin-top: -1.5rem;
     }
