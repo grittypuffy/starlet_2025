@@ -4,7 +4,7 @@ import './InfoCard.css'
 function InfoCard() {
     return (
       <div className='container'>
-        <img src={titleImage} alt='we can do it'/>
+        <img src={titleImage} className="title-image" alt='we can do it'/>
 
         <div className='text-holder'>
           <h3>Mind Empowered Presents</h3>
