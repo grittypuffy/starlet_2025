@@ -16,17 +16,22 @@
 }
 
 .mission-card {
+  min-width: 28.5%;
+  min-height: 17rem;
   background-color: #042b62;
   color: white;
   padding: 2rem 2rem;
   border-radius: 40px;
   text-align: center;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lefty {
+  text-align: left;
 }
 
 .mission-card:hover {

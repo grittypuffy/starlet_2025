@@ -1,3 +1,4 @@
+/* Updated sponsors.css */
 .sponsors-section {
   position: relative;
   margin-bottom: 2rem;
@@ -34,13 +35,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  height: auto;
+  flex-wrap: wrap; /* Allow cards to wrap into new rows */
   padding-bottom: 2rem;
 }
 
 .sponsor-card {
-  width: 30%;
+  /* width: 30%; */ /* Remove fixed width */
+  flex: 0 0 30%; /* Adjust as needed, or leave it flexible */
   height: auto;
   min-height: 300px; /* Increased height */
   padding: 1.5rem;
@@ -54,6 +55,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem; /* Optional: Add margin between cards */
 }
 
 .sponsor-card:hover {
@@ -71,8 +73,8 @@
   width: 100px;
   height: 100px;
   object-fit: contain;
-  margin-bottom: 1rem;
   border-radius: 20px;
+  background-color: white;
 }
 
 .sponsor-button {
@@ -96,35 +98,35 @@
 /* Fade-in effect */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(10px) scale(0.95);
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
   }
   to {
-      opacity: 1;
-      transform: translateY(-5px) scale(1);
+    opacity: 1;
+    transform: translateY(-5px) scale(1);
   }
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .sponsors-container {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 3rem;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
   }
 
   .sponsor-card {
-      width: 80%;
-      margin-bottom: 1.5rem;
-      min-height: 300px; /* Adjusted for consistency */
+    width: 80%;
+    margin-bottom: 1.5rem;
+    min-height: 300px; /* Adjusted for consistency */
   }
 
   .sponsors-header {
-      max-width: 80%;
-      margin: 0 auto 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem;
   }
 
   .sponsors-header h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 }

@@ -7,16 +7,9 @@ const Prizes = () => {
       <h2 className="prizes-title">Hackathon Prizes</h2>
       <div className="prizes-cards">
         <div className="prize-card first">
-          <h3>🥇</h3>
-          <p>₹10,000</p>
-        </div>
-        <div className="prize-card second">
-          <h3>🥈</h3>
-          <p>₹ 7,000</p>
-        </div>
-        <div className="prize-card third">
-          <h3>🥉</h3>
-          <p>₹ 5,000</p>
+          <h3>🥇🥈🥉</h3>
+          <p>₹40,000</p>
+          <p>Divided Among Exciting Tracks.</p>
         </div>
       </div>
     </div>

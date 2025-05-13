@@ -55,11 +55,11 @@
 /* Image styling with smooth animation */
 .title-image {
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     flex: 1;
     margin-bottom: 5rem;
-
+    margin-top: -10rem;
     /* Animations */
     animation: fadeIn 1.5s ease-out, floatImage 4s ease-in-out infinite;
     animation-delay: 0s, 1.5s; /* Start floating animation AFTER fade-in ends */

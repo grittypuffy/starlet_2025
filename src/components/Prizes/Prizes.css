@@ -84,7 +84,7 @@
     100% { opacity: 0.6; }
 }
 
-.first { background-color: rgba(255, 217, 0, 0.8); }
+.first { background-color: #faea5d; }
 .second { background-color: rgba(192, 192, 192, 0.8); }
 .third { background-color: rgba(205, 128, 50, 0.8); }
 .special { background-color: rgba(254, 241, 129, 0.8); color: #042b62; }
