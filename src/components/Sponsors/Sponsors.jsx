@@ -1,4 +1,4 @@
-import "./sponsors.css"
+import "./Sponsors.css"
 
 const Sponsors = () => {
   // Sample sponsor data - replace with your actual sponsors
