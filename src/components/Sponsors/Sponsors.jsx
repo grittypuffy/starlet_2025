@@ -14,18 +14,20 @@ import samagata from "../../assets/logos/samagata.png";
 
 const Sponsors = () => {
   const sponsors = [
-    { id: 1, name: "FOSS", logo: foss, url: "https://example.com" },
-    { id: 2, name: "WiCyS", logo: wicys, url: "https://example.com" },
-    { id: 3, name: "SLBS", logo: slbs, url: "https://example.com" },
-    { id: 4, name: "KSUM", logo: ksum, url: "https://example.com" },
-    { id: 5, name: "Github", logo: github, url: "https://example.com" },
-    { id: 6, name: "Tinkerhub", logo: tinkerhub, url: "https://example.com" },
-    { id: 7, name: "Cittic", logo: cittic, url: "https://example.com" },
-    { id: 8, name: "Aisat", logo: aisat, url: "https://example.com" },
-    { id: 9, name: "Pehia", logo: pehia, url: "https://example.com" },
-    { id: 10, name: "Civil 20", logo: c20, url: "https://example.com" },
-    { id: 11, name: "asap", logo: asap, url: "https://example.com" },
-    { id: 12, name: "Samagata Foundation", logo: samagata, url: "https://example.com" },
+  ]
+  const previousSponsors = [
+    { id: 1, name: "FOSS United", logo: foss, url: "https://fossunited.org" },
+    { id: 2, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
+    { id: 3, name: "School for Logistics & Business Studies", logo: slbs, url: "https://slbs.com" },
+    { id: 4, name: "Kerala Startup Mission", logo: ksum, url: "https://startupmission.kerala.gov.in/" },
+    { id: 5, name: "GitHub", logo: github, url: "https://github.com" },
+    { id: 6, name: "Tinkerhub Foundation", logo: tinkerhub, url: "https://tinkerhub.org" },
+    { id: 7, name: "Cittic", logo: cittic, url: "https://cittic.cusat.ac.in/" },
+    { id: 8, name: "Aisat", logo: aisat, url: "https://aisat.ac.in/" },
+    { id: 9, name: "Pehia Foundation", logo: pehia, url: "https://pehia.org/" },
+    { id: 10, name: "Civil 20", logo: c20, url: "https://c20.amma.org/" },
+    { id: 11, name: "ASAP Community Skill Park", logo: asap, url: "https://csp.asapkerala.gov.in/" },
+    { id: 12, name: "Samagata Foundation", logo: samagata, url: "https://samagata.org" },
   ];
 
   return (
@@ -34,10 +36,18 @@ const Sponsors = () => {
         <h3>Our Partners</h3>
         <h1>Sponsors</h1>
         <p>Proudly supported by industry leaders</p>
+        <h4>Interested in sponsoring us? Check our&nbsp;
+          <a
+            href="/sponsorship-deck.pdf" target="_blank"
+            rel="noopener noreferrer"
+            style={{color: "inherit"}}
+          >
+            sponsorship deck
+          </a>
+        </h4>
       </div>
-
       <div className="container sponsors-container">
-        {sponsors.map((sponsor) => (
+        {sponsors && sponsors.map((sponsor) => (
           <a
             key={sponsor.id}
             href={sponsor.url}
@@ -48,7 +58,27 @@ const Sponsors = () => {
             <div className="sponsor-content">
               <img src={sponsor.logo} alt={`${sponsor.name} logo`} className="sponsor-logo" />
               <h3 className="sponsor-name">{sponsor.name}</h3>
-              <button className="sponsor-button">Learn More</button>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div className="text-holder sponsors-header">
+        <h3>Previous Sponsors</h3>
+      </div>
+
+      <div className="container sponsors-container">
+        {previousSponsors.map((sponsor) => (
+          <a
+            key={sponsor.id}
+            href={sponsor.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-card"
+          >
+            <div className="sponsor-content">
+              <img src={sponsor.logo} alt={`${sponsor.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{sponsor.name}</h3>
             </div>
           </a>
         ))}
