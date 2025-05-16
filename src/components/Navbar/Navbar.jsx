@@ -30,15 +30,23 @@ function Navbar() {
 
   // Scroll to EventDetails Section
   const scrollToEventDetails = () => {
-    console.log("Clicked About button"); // Debug log
     const eventDetailsElement = document.getElementById("eventdetails");
 
     if (eventDetailsElement) {
-      console.log("Found eventdetails section"); // Debug log
       eventDetailsElement.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false); // Close menu on mobile
     } else {
       console.log("eventdetails section NOT found");
+    }
+  };
+
+  // Scroll to Sponsors Section
+  const scrollToSponsors = () => {
+    const sponsorsDetailsElement = document.querySelector(".sponsors-section");
+
+    if (sponsorsDetailsElement) {
+      sponsorsDetailsElement.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
     }
   };
 
@@ -78,7 +86,7 @@ function Navbar() {
       <ul ref={menuRef} className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li><button className="secondary-button" onClick={scrollToEventDetails}>About</button></li>
         <li><button className="secondary-button" onClick={scrollToPrize}>Prizes</button></li>
-        <li><button className="secondary-button" onClick={() => setMenuOpen(false)}>Sponsors</button></li>
+        <li><button className="secondary-button" onClick={scrollToSponsors}>Sponsors</button></li>
         <li><button className="secondary-button" onClick={scrollToTimeline}>Schedule</button></li>
         <li><button className="btn btn-dark primary" onClick={() => setMenuOpen(false)}>Register Now</button></li>
       </ul>

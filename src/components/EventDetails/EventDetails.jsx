@@ -52,9 +52,9 @@ function EventDetails() {
       <div className="container">
         <div className="card event-details slide-in-left" ref={(el) => elementsRef.current.push(el)}>
           <h1>Event Details</h1>
-          <p>Date: 5th-6th July 2025</p>
-          <p>Place: Seth Ram Bahadur Singh Gujarati College. <a href="https://maps.app.goo.gl/GU1rShkDK6rsfVDM9" target="_blank" rel="noopener noreferrer">Here</a></p>
-          <p>Time: 5th 9:00 to 6th 17:00</p>
+          <p>Date: 5 July 2025 - 6 July 2025</p>
+          <p>Place: <a href="https://maps.app.goo.gl/GU1rShkDK6rsfVDM9" target="_blank" rel="noopener noreferrer">Seth Ram Bahadur Singh Gujarati College</a></p>
+          <p>Time: 09:00 AM IST (5 July 2025) to 05:00 PM IST (6 July 2025) </p>
         </div>
 
         <div className="card countdown-card slide-in-right" ref={(el) => elementsRef.current.push(el)}>
@@ -71,7 +71,7 @@ function EventDetails() {
           <p>
           Starlet is the ultimate innovation marathon for women where ideas meet execution and strangers become teammates. Whether you're a seasoned coder or just stepping into the world of tech, this event is built for everyone — solo innovators, dynamic duos, and full-fledged teams!
           </p>
-          <p>See brochure <a href="/Brochure.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+          <h5>See brochure <a href="/Brochure.pdf" target="_blank" rel="noopener noreferrer" style={{color: "inherit"}}>here</a>.</h5>
         </div>
       </div>
 
@@ -87,7 +87,7 @@ function EventDetails() {
           <p>
             Mind Empowered (ME) is a charitable organization based in India.
             It is the brainchild of Maya Menon and her sister - two sisters who resonate positivity and happiness wherever they go.
-            The sisters realized there was a strong need to eliminate stigma associated with mental illness from our society.
+            The sisters realized there was a strong need to eliminate the stigma associated with mental health from our society.
             Hence, the idea of an open forum to help the students came to life by forming "ME".
           </p>
         </div>

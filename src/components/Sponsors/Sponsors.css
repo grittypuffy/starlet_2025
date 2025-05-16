@@ -49,6 +49,7 @@
   border-radius: 20px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
+  text-decoration: none;
   color: #fef181; /* Yellow text */
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -75,6 +76,7 @@
   object-fit: contain;
   border-radius: 20px;
   background-color: white;
+  margin-bottom: 1em;
 }
 
 .sponsor-button {
