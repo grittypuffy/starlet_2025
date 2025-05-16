@@ -18,7 +18,7 @@ const Sponsors = () => {
   const previousSponsors = [
     { id: 1, name: "FOSS United", logo: foss, url: "https://fossunited.org" },
     { id: 2, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
-    { id: 3, name: "School for Logistics & Business Studies", logo: slbs, url: "https://slbs.com" },
+    { id: 3, name: "SLBS Marklance", logo: slbs, url: "https://slbsmarklance.com/" },
     { id: 4, name: "Kerala Startup Mission", logo: ksum, url: "https://startupmission.kerala.gov.in/" },
     { id: 5, name: "GitHub", logo: github, url: "https://github.com" },
     { id: 6, name: "Tinkerhub Foundation", logo: tinkerhub, url: "https://tinkerhub.org" },
