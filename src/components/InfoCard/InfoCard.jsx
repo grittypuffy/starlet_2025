@@ -8,7 +8,7 @@ function InfoCard() {
 
         <div className='text-holder'>
           <h3>Mind Empowered Presents</h3>
-          <h1>Startlet Hackathon</h1>
+          <h1>Starlet Hackathon</h1>
           <p> Empowering Women and Gender Minorities</p>
           <button>Register Now</button>
         </div>
