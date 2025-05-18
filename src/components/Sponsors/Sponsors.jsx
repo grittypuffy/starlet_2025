@@ -12,9 +12,21 @@ import c20 from "../../assets/logos/c20.jpg";
 import asap from "../../assets/logos/asap.jpeg";
 import samagata from "../../assets/logos/samagata.png";
 
+import ravyn from "../../assets/logos/outreach/ravyn.png";
+import sahrdaya from "../../assets/logos/outreach/sahrdaya.png";
+import knowlumi from "../../assets/logos/outreach/knowlumi.png";
+
+
 const Sponsors = () => {
   const sponsors = [
   ]
+
+  const outreachPartners = [
+    { id: 1, name: "Ravyn Company", logo: ravyn, url: "https://www.ravyncorp.com/", description: `` },
+    { id: 2, name: "IEEE Sahrdaya", logo: sahrdaya, url: "https://ieeesahrdaya.com/", description: `` },
+    { id: 3, name: "KnowLumi", logo: knowlumi, url: "https://www.knowlumi.com/", description: `` }
+  ]
+
   const previousSponsors = [
     { id: 1, name: "FOSS United", logo: foss, url: "https://fossunited.org" },
     { id: 2, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
@@ -22,7 +34,7 @@ const Sponsors = () => {
     { id: 4, name: "Kerala Startup Mission", logo: ksum, url: "https://startupmission.kerala.gov.in/" },
     { id: 5, name: "GitHub", logo: github, url: "https://github.com" },
     { id: 6, name: "Tinkerhub Foundation", logo: tinkerhub, url: "https://tinkerhub.org" },
-    { id: 7, name: "Cittic", logo: cittic, url: "https://cittic.cusat.ac.in/" },
+    { id: 7, name: "CITTIC", logo: cittic, url: "https://cittic.cusat.ac.in/" },
     { id: 8, name: "Aisat", logo: aisat, url: "https://aisat.ac.in/" },
     { id: 9, name: "Pehia Foundation", logo: pehia, url: "https://pehia.org/" },
     { id: 10, name: "Civil 20", logo: c20, url: "https://c20.amma.org/" },
@@ -63,8 +75,30 @@ const Sponsors = () => {
         ))}
       </div>
 
+
       <div className="text-holder sponsors-header">
-        <h3>Previous Sponsors</h3>
+        <h3>Outreach Partners</h3>
+      </div>
+
+      <div className="container sponsors-container">
+        {outreachPartners.map((partner) => (
+          <a
+            key={partner.id}
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-card"
+          >
+            <div className="sponsor-content">
+              <img src={partner.logo} alt={`${partner.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{partner.name}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div className="text-holder sponsors-header">
+        <h3>Previous Sponsors and Partners</h3>
       </div>
 
       <div className="container sponsors-container">

@@ -252,6 +252,9 @@
     color: #042b62;
     position: relative;
     z-index: 2;
+    width: auto;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
   
   /* Responsive Fixes */
