@@ -45,10 +45,8 @@ const Sponsors = () => {
   return (
     <div className="sponsors-section">
       <div className="text-holder sponsors-header">
-        <h3>Our Partners</h3>
-        <h1>Sponsors</h1>
-        <p>Proudly supported by industry leaders</p>
-        <h4>Interested in sponsoring us? Check our&nbsp;
+        <h1>Sponsors and Partners</h1>
+        <p>Interested in sponsoring us? Check our&nbsp;
           <a
             href="/sponsorship-deck.pdf" target="_blank"
             rel="noopener noreferrer"
@@ -56,23 +54,7 @@ const Sponsors = () => {
           >
             sponsorship deck
           </a>
-        </h4>
-      </div>
-      <div className="container sponsors-container">
-        {sponsors && sponsors.map((sponsor) => (
-          <a
-            key={sponsor.id}
-            href={sponsor.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sponsor-card"
-          >
-            <div className="sponsor-content">
-              <img src={sponsor.logo} alt={`${sponsor.name} logo`} className="sponsor-logo" />
-              <h3 className="sponsor-name">{sponsor.name}</h3>
-            </div>
-          </a>
-        ))}
+        </p>
       </div>
 
 
