@@ -88,7 +88,7 @@ function Navbar() {
         <li><button className="secondary-button" onClick={scrollToPrize}>Prizes</button></li>
         <li><button className="secondary-button" onClick={scrollToSponsors}>Sponsors</button></li>
         <li><button className="secondary-button" onClick={scrollToTimeline}>Schedule</button></li>
-        <li><button className="btn btn-dark primary" onClick={() => setMenuOpen(false)}>Register Now</button></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyP9JjvID93n8_zsTEk16sDpXvbi-4EieycQCi-hh-QGBqGA/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadI4cMeIHnqgL9UbQOnCYaGk4OomIS1Yv9asHtH9GaR7Q_dS5SVU-neAuilYg_aem_7kXmfgbUjQylXHON8jc-uw"><button className="btn btn-dark primary">Register Now</button></a></li>
       </ul>
     </nav>
   );
