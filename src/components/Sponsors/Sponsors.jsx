@@ -12,6 +12,7 @@ import c20 from "../../assets/logos/c20.jpg";
 import asap from "../../assets/logos/asap.jpeg";
 import samagata from "../../assets/logos/samagata.png";
 
+import lenientTree from "../../assets/logos/outreach/lenientTree.jpg";
 import ravyn from "../../assets/logos/outreach/ravyn.png";
 import sahrdaya from "../../assets/logos/outreach/sahrdaya.png";
 import knowlumi from "../../assets/logos/outreach/knowlumi.png";
@@ -24,7 +25,8 @@ const Sponsors = () => {
   const outreachPartners = [
     { id: 1, name: "Ravyn Company", logo: ravyn, url: "https://www.ravyncorp.com/", description: `` },
     { id: 2, name: "IEEE Sahrdaya", logo: sahrdaya, url: "https://ieeesahrdaya.com/", description: `` },
-    { id: 3, name: "KnowLumi", logo: knowlumi, url: "https://www.knowlumi.com/", description: `` }
+    { id: 3, name: "KnowLumi", logo: knowlumi, url: "https://www.knowlumi.com/", description: `` },
+    {id: 4, name: "Lenient Tree", logo: lenientTree, url: "https://lenienttree.com/", description: ``},
   ]
 
   const previousSponsors = [
