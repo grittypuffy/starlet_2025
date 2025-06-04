@@ -94,7 +94,7 @@ const Sponsors = () => {
       </div>
 
       <div className="text-holder sponsors-header">
-        <h3>Sponsors</h3>
+        <h3>Venue Partner</h3>
       </div>
 
       <div className="container sponsors-container">
