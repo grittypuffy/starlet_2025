@@ -17,10 +17,23 @@ import ravyn from "../../assets/logos/outreach/ravyn.png";
 import sahrdaya from "../../assets/logos/outreach/sahrdaya.png";
 import knowlumi from "../../assets/logos/outreach/knowlumi.png";
 
+import carestack from "../../assets/logos/current/carestack.svg";
+import samagataCurrent from "../../assets/logos/current/samagata.png";
+import kango from "../../assets/logos/current/kango.png";
+
+import srbd from "../../assets/logos/venue/gujarati_college.jpg"; 
 
 const Sponsors = () => {
   const sponsors = [
+    { id: 1, name: "Care Stack", logo: ravyn, url: "https://carestack.com/", description: `` },
+    { id: 2, name: "Kango Ventures", logo: kango, url: "https://example.com/", description: `` },
+    { id: 3, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
   ]
+
+  const venuePartner = [
+    { id: 1, name: "Seth Ram Bahadur Singh Gujarati College", logo: srbd, url: "https://www.cochingujaratimahajan.com/#modal-one/", description: `` },
+  ]
+
 
   const outreachPartners = [
     { id: 1, name: "Ravyn Company", logo: ravyn, url: "https://www.ravyncorp.com/", description: `` },
@@ -59,6 +72,47 @@ const Sponsors = () => {
         </p>
       </div>
 
+      <div className="text-holder sponsors-header">
+        <h3>Sponsors</h3>
+      </div>
+
+      <div className="container sponsors-container">
+        {sponsors.map((partner) => (
+          <a
+            key={partner.id}
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-card"
+          >
+            <div className="sponsor-content">
+              <img src={partner.logo} alt={`${partner.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{partner.name}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div className="text-holder sponsors-header">
+        <h3>Sponsors</h3>
+      </div>
+
+      <div className="container sponsors-container">
+        {venuePartner.map((partner) => (
+          <a
+            key={partner.id}
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-card"
+          >
+            <div className="sponsor-content">
+              <img src={partner.logo} alt={`${partner.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{partner.name}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
 
       <div className="text-holder sponsors-header">
         <h3>Outreach Partners</h3>
