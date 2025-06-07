@@ -28,6 +28,7 @@ const Sponsors = () => {
     { id: 1, name: "Care Stack", logo: ravyn, url: "https://carestack.com/", description: `` },
     { id: 2, name: "Kango Ventures", logo: kango, url: "https://example.com/", description: `` },
     { id: 3, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
+    { id: 4, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
   ]
 
   const venuePartner = [
@@ -39,22 +40,21 @@ const Sponsors = () => {
     { id: 1, name: "Ravyn Company", logo: ravyn, url: "https://www.ravyncorp.com/", description: `` },
     { id: 2, name: "IEEE Sahrdaya", logo: sahrdaya, url: "https://ieeesahrdaya.com/", description: `` },
     { id: 3, name: "KnowLumi", logo: knowlumi, url: "https://www.knowlumi.com/", description: `` },
-    {id: 4, name: "Lenient Tree", logo: lenientTree, url: "https://lenienttree.com/", description: ``},
+    { id: 4, name: "Lenient Tree", logo: lenientTree, url: "https://lenienttree.com/", description: `` },
   ]
 
   const previousSponsors = [
     { id: 1, name: "FOSS United", logo: foss, url: "https://fossunited.org" },
-    { id: 2, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
-    { id: 3, name: "SLBS Marklance", logo: slbs, url: "https://slbsmarklance.com/" },
-    { id: 4, name: "Kerala Startup Mission", logo: ksum, url: "https://startupmission.kerala.gov.in/" },
-    { id: 5, name: "GitHub", logo: github, url: "https://github.com" },
-    { id: 6, name: "Tinkerhub Foundation", logo: tinkerhub, url: "https://tinkerhub.org" },
-    { id: 7, name: "CITTIC", logo: cittic, url: "https://cittic.cusat.ac.in/" },
-    { id: 8, name: "Aisat", logo: aisat, url: "https://aisat.ac.in/" },
-    { id: 9, name: "Pehia Foundation", logo: pehia, url: "https://pehia.org/" },
-    { id: 10, name: "Civil India 20 (part of G20)", logo: c20, url: "https://c20.amma.org/" },
-    { id: 11, name: "ASAP Community Skill Park", logo: asap, url: "https://csp.asapkerala.gov.in/" },
-    { id: 12, name: "Samagata Foundation", logo: samagata, url: "https://samagata.org" },
+    { id: 2, name: "SLBS Marklance", logo: slbs, url: "https://slbsmarklance.com/" },
+    { id: 3, name: "Kerala Startup Mission", logo: ksum, url: "https://startupmission.kerala.gov.in/" },
+    { id: 4, name: "GitHub", logo: github, url: "https://github.com" },
+    { id: 5, name: "Tinkerhub Foundation", logo: tinkerhub, url: "https://tinkerhub.org" },
+    { id: 6, name: "CITTIC", logo: cittic, url: "https://cittic.cusat.ac.in/" },
+    { id: 7, name: "Aisat", logo: aisat, url: "https://aisat.ac.in/" },
+    { id: 8, name: "Pehia Foundation", logo: pehia, url: "https://pehia.org/" },
+    { id: 9, name: "Civil India 20 (part of G20)", logo: c20, url: "https://c20.amma.org/" },
+    { id: 10, name: "ASAP Community Skill Park", logo: asap, url: "https://csp.asapkerala.gov.in/" },
+    { id: 11, name: "Samagata Foundation", logo: samagata, url: "https://samagata.org" },
   ];
 
   return (
