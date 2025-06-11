@@ -25,7 +25,7 @@ import srbd from "../../assets/logos/venue/gujarati_college.jpg";
 
 const Sponsors = () => {
   const sponsors = [
-    { id: 1, name: "Care Stack", logo: ravyn, url: "https://carestack.com/", description: `` },
+    { id: 1, name: "Care Stack", logo: carestack, url: "https://carestack.com/", description: `` },
     { id: 2, name: "Kango Ventures", logo: kango, url: "https://example.com/", description: `` },
     { id: 3, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
   ]
