@@ -20,6 +20,7 @@ import knowlumi from "../../assets/logos/outreach/knowlumi.png";
 import carestack from "../../assets/logos/current/carestack.svg";
 import samagataCurrent from "../../assets/logos/current/samagata.png";
 import kango from "../../assets/logos/current/kango.png";
+import fosfem from "../../assets/logos/current/fosfem.svg"
 
 import srbd from "../../assets/logos/venue/gujarati_college.jpg"; 
 
@@ -29,6 +30,7 @@ const Sponsors = () => {
     { id: 2, name: "Kango Ventures", logo: kango, url: "https://example.com/", description: `` },
     { id: 3, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
     { id: 4, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
+    { id: 5, name: "FOSFEM", logo: fosfem, url: "https://fosfem.org" }
   ]
 
   const venuePartner = [
