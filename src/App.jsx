@@ -1,24 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar'
-import InfoCard from './components/InfoCard/InfoCard'
-import EventDetails from './components/EventDetails/EventDetails'
+import Home from './pages/Home/Home'
 import CursorEffect from './components/CursorEffect/CursorEffect'
-import Timeline from './components/Timeline/Timeline'
-import Prizes from './components/Prizes/Prizes'
-import Sponsors from './components/Sponsors/Sponsors'
 import './App.css'
 
 function App() {
   return (
-    <div className='magicpattern'>
-      <CursorEffect/>
-      <Navbar/>
-      <InfoCard/>
-      <EventDetails/>
-      <Prizes/>
-      <Sponsors/>
-      <Timeline/>
-    </div>
+    <Router>
+      <div className='magicpattern'>
+        <CursorEffect />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
+
 
 export default App

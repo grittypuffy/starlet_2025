@@ -55,21 +55,15 @@ function Navbar() {
     if (prizes) {
       prizes.scrollIntoView({behaviour: "smooth"});
       setMenuOpen(false);
-    } else {
-      console.log("prizes not found");
     }
   };
-  // Scroll to Timeline Section
-  const scrollToTimeline = () => {
-    console.log("Clicked Schedule button"); // Debug log
-    const timelineElement = document.getElementById("timeline");
 
-    if (timelineElement) {
-      console.log("Found timeline section");
-      timelineElement.scrollIntoView({ behavior: "smooth" });
+  // Scroll to Overview Section
+  const scrollToOverview = () => {
+    const overviewElement = document.getElementById("overview");
+    if (overviewElement) {
+      overviewElement.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false);
-    } else {
-      console.log("timeline section NOT found");
     }
   };
 
@@ -87,7 +81,7 @@ function Navbar() {
         <li><button className="secondary-button" onClick={scrollToEventDetails}>About</button></li>
         <li><button className="secondary-button" onClick={scrollToPrize}>Prizes</button></li>
         <li><button className="secondary-button" onClick={scrollToSponsors}>Sponsors</button></li>
-        <li><button className="secondary-button" onClick={scrollToTimeline}>Schedule</button></li>
+        <li><button className="secondary-button" onClick={scrollToOverview}>Overview</button></li>
         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyP9JjvID93n8_zsTEk16sDpXvbi-4EieycQCi-hh-QGBqGA/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadI4cMeIHnqgL9UbQOnCYaGk4OomIS1Yv9asHtH9GaR7Q_dS5SVU-neAuilYg_aem_7kXmfgbUjQylXHON8jc-uw"><button className="btn btn-dark primary">Register Now</button></a></li>
       </ul>
     </nav>

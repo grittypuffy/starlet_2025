@@ -1,5 +1,5 @@
-/* Timeline Container */
-.timeline-container {
+/* overview Container */
+.overview-container {
     padding: 2rem;
     background-color: #042b62de;
     text-align: center;
@@ -28,7 +28,7 @@
   }
   
   /* Add a decorative element that moves across the container */
-  .timeline-container::before {
+  .overview-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -47,7 +47,7 @@
   }
   
   /* Title */
-  .timeline-title {
+  .overview-title {
     font-size: 2rem;
     color: #fef181;
     margin-bottom: 1rem;
@@ -65,8 +65,8 @@
     }
   }
   
-  /* Scrollable Timeline */
-  .timeline-scroll {
+  /* Scrollable overview */
+  .overview-scroll {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -82,11 +82,11 @@
     height: 13rem;
   }
   
-  .timeline-scroll::-webkit-scrollbar {
+  .overview-scroll::-webkit-scrollbar {
     height: 8px;
   }
   
-  .timeline-scroll::-webkit-scrollbar-thumb {
+  .overview-scroll::-webkit-scrollbar-thumb {
     background-color: #fef181;
     border-radius: 10px;
     animation: pulseScroll 2s infinite alternate;
@@ -101,12 +101,12 @@
     }
   }
   
-  .timeline-scroll::-webkit-scrollbar-track {
+  .overview-scroll::-webkit-scrollbar-track {
     background: rgba(4, 43, 98, 0.3);
   }
   
   /* Event Card */
-  .timeline-event-card {
+  .overview-event-card {
     flex: 0 0 auto;
     width: auto;
     height: 9.5rem;
@@ -125,25 +125,25 @@
   }
   
   /* Assign animation delay to each card */
-  .timeline-scroll .timeline-event-card:nth-child(1) {
+  .overview-scroll .overview-event-card:nth-child(1) {
     --card-index: 1;
   }
-  .timeline-scroll .timeline-event-card:nth-child(2) {
+  .overview-scroll .overview-event-card:nth-child(2) {
     --card-index: 2;
   }
-  .timeline-scroll .timeline-event-card:nth-child(3) {
+  .overview-scroll .overview-event-card:nth-child(3) {
     --card-index: 3;
   }
-  .timeline-scroll .timeline-event-card:nth-child(4) {
+  .overview-scroll .overview-event-card:nth-child(4) {
     --card-index: 4;
   }
-  .timeline-scroll .timeline-event-card:nth-child(5) {
+  .overview-scroll .overview-event-card:nth-child(5) {
     --card-index: 5;
   }
-  .timeline-scroll .timeline-event-card:nth-child(6) {
+  .overview-scroll .overview-event-card:nth-child(6) {
     --card-index: 6;
   }
-  .timeline-scroll .timeline-event-card:nth-child(7) {
+  .overview-scroll .overview-event-card:nth-child(7) {
     --card-index: 7;
   }
   
@@ -159,7 +159,7 @@
   }
   
   /* Add a glowing border effect */
-  .timeline-event-card::before {
+  .overview-event-card::before {
     content: "";
     position: absolute;
     top: -2px;
@@ -173,13 +173,13 @@
     transition: opacity 0.3s ease;
   }
   
-  .timeline-event-card:hover {
+  .overview-event-card:hover {
     transform: translateY(-5px) rotate(2deg) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     animation: cardFloat 3s ease infinite;
   }
   
-  .timeline-event-card:hover::before {
+  .overview-event-card:hover::before {
     opacity: 1;
     animation: borderGlow 1.5s linear infinite;
   }
@@ -209,7 +209,7 @@
   }
   
   /* Add a flash effect when cards appear */
-  .timeline-event-card::after {
+  .overview-event-card::after {
     content: "";
     position: absolute;
     top: 0;
@@ -237,7 +237,7 @@
   }
   
   /* Event Time */
-  .timeline-event-time {
+  .overview-event-time {
     font-size: 1rem;
     font-weight: bold;
     margin: 0.5rem 0;
@@ -247,7 +247,7 @@
   }
   
   /* Event Description */
-  .timeline-event-description {
+  .overview-event-description {
     font-size: 0.9rem;
     color: #042b62;
     position: relative;
@@ -259,19 +259,19 @@
   
   /* Responsive Fixes */
   @media (max-width: 768px) {
-    .timeline-container {
+    .overview-container {
       margin-top: 0; /* Remove top margin on small screens */
       padding-top: 4rem; /* Add padding instead to create space */
       position: relative; /* Ensure proper stacking */
       z-index: 1; /* Lower z-index than EventDetails */
     }
-    .timeline-scroll {
+    .overview-scroll {
       flex-direction: column;
       overflow-x: hidden;
       max-width: 100%;
       align-items: center;
     }
-    .timeline-event-card {
+    .overview-event-card {
       width: 90%;
       margin: 0.5rem auto;
       animation: rotateSlightly 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
@@ -289,7 +289,7 @@
       }
     }
   
-    .timeline-event-card:hover {
+    .overview-event-card:hover {
       transform: translateY(-5px) rotate(1deg) scale(1.03);
       animation: mobileCardFloat 0.25s ease infinite;
     }

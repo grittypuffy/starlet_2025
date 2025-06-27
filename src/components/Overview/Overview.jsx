@@ -1,5 +1,5 @@
 import React from "react";
-import "./Timeline.css";
+import "./Overview.css";
 
 const events = [
   {
@@ -35,16 +35,16 @@ const events = [
 ];
 
 
-const Timeline = () => {
+const overview = () => {
   return (
-    <div id="timeline" className="timeline-container">
-      <h2 className="timeline-title">Hackathon Duration</h2>
-      <div className="timeline-scroll">
+    <div id="overview" className="overview-container">
+      <h2 className="overview-title">Hackathon Overview</h2>
+      <div className="overview-scroll">
         {events.map((event, index) => (
-          <div key={index} className="timeline-event-card">
+          <div key={index} className="overview-event-card">
             <h3>{event.title}</h3>
-            <p className="timeline-event-time">{event.time}</p>
-            <p className="timeline-event-description">{event.description}</p>
+            <p className="overview-event-time">{event.time}</p>
+            <p className="overview-event-description">{event.description}</p>
           </div>
         ))}
       </div>
@@ -52,4 +52,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default overview;
