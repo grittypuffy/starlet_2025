@@ -1,5 +1,5 @@
-/* Updated faq.css */
-.faq-section {
+/* Updated sponsors.css */
+.tg-section {
   position: relative;
   margin-bottom: 2rem;
   padding: 2rem 0;
@@ -7,73 +7,65 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
-.faq-header {
+.tg-header {
   text-align: center;
 }
 
-.faq-header h3 {
+.tg-header h3 {
   font-size: 1.5rem;
   color: #555;
 }
 
-.faq-header h1 {
+.tg-header h1 {
   font-size: 3rem;
   color: #042b62;
   margin: 1rem 0;
 }
 
-.faq-header p {
+.tg-header p {
   font-size: 1.2rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.faq-container {
+.tg-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; 
   padding-bottom: 1rem;
-  width: 100%;
 }
 
-.faq-card {
-  width: 100%;
-  max-width: 60%;
-  margin: 0 auto;
+.tg-card {
   flex: 0 0 30%;
   height: auto;
-  min-height: 0.75rem;
+  min-height: 15rem;
   background-color: #042b62d8;
   border-radius: 20px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
-  text-align: start;
+  text-align: center;
   text-decoration: none;
   color: #fef181; 
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
 }
 
-.faq-card:hover {
+.sponsor-card:hover {
   transform: translateY(-10px);
 }
 
-.faq-name {
+.sponsor-name {
   font-size: 1.5rem;
   margin: 0.5rem 0 1.5rem;
   color: #fef181;
 }
 
-.faq-logo {
+.sponsor-logo {
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -82,7 +74,7 @@
   margin-bottom: 1em;
 }
 
-.faq-button {
+.sponsor-button {
   padding: 0.8rem 2rem;
   font-size: 1rem;
   background-color: #fef181; /* Yellow button */
@@ -94,7 +86,7 @@
   margin-top: auto;
 }
 
-.faq-button:hover {
+.sponsor-button:hover {
   transform: translateY(-5px);
   background-color: #ffda44; /* Lighter yellow on hover */
   box-shadow: 0 0 15px rgba(255, 223, 0, 1);
@@ -114,25 +106,24 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .faq-container {
-    gap: 0rem;
+  .sponsors-container {
     flex-direction: column;
     align-items: center;
     padding-bottom: 3rem;
   }
 
-  .faq-card {
+  .sponsor-card {
     width: 80%;
     margin-bottom: 1.5rem;
-    min-height: 50%; /* Adjusted for consistency */
+    min-height: 300px; /* Adjusted for consistency */
   }
 
-  .faq-header {
+  .sponsors-header {
     max-width: 80%;
     margin: 0 auto 2rem;
   }
 
-  .faq-header h1 {
+  .sponsors-header h1 {
     font-size: 2.5rem;
   }
 }

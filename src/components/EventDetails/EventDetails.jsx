@@ -54,7 +54,7 @@ function EventDetails() {
           <h1>Event Details</h1>
           <p>Date: 5 July 2025 - 6 July 2025</p>
           <p>Place: <a href="https://maps.app.goo.gl/GU1rShkDK6rsfVDM9" target="_blank" rel="noopener noreferrer">Seth Ram Bahadur Singh Gujarati College</a></p>
-          <p>Time: 09:00 AM IST (5 July 2025) to 05:00 PM IST (6 July 2025) </p>
+          <p>Time: 08:30 AM IST (5 July 2025) to 05:00 PM IST (6 July 2025) </p>
         </div>
 
         <div className="card countdown-card slide-in-right" ref={(el) => elementsRef.current.push(el)}>

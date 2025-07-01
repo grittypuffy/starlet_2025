@@ -21,6 +21,10 @@ import carestack from "../../assets/logos/current/carestack.svg";
 import samagataCurrent from "../../assets/logos/current/samagata.png";
 import kango from "../../assets/logos/current/kango.png";
 import fosfem from "../../assets/logos/current/fosfem.svg"
+import recca from "../../assets/logos/current/recca-club.png"
+import frenchtoast from "../../assets/logos/current/french-toast.png"
+
+import prajaahita from "../../assets/logos/current/prajaahita.png"
 
 import srbd from "../../assets/logos/venue/gujarati_college.jpg"; 
 
@@ -28,16 +32,19 @@ const Sponsors = () => {
   const sponsors = [
     { id: 1, name: "Care Stack", logo: carestack, url: "https://carestack.com/", description: `` },
     { id: 2, name: "Kango Ventures", logo: kango, url: "https://example.com/", description: `` },
-    { id: 3, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
+    { id: 3, name: "French Toast", logo: frenchtoast, url: "https://carestack.com/", description: `` },
     { id: 4, name: "WiCyS", logo: wicys, url: "https://wicys.org" },
-    { id: 5, name: "FOSFEM", logo: fosfem, url: "https://fosfem.org" }
+    { id: 5, name: "FOSFEM", logo: fosfem, url: "https://fosfem.org" },
+    { id: 6, name: "Recca Club Ladies Forum", logo: recca, url: "https://reccaaclub.in/"},
   ]
 
   const venuePartner = [
     { id: 1, name: "Seth Ram Bahadur Singh Gujarati College", logo: srbd, url: "https://www.cochingujaratimahajan.com/#modal-one/", description: `` },
   ]
 
-
+  const prizeSponsor = [
+    { id: 1, name: "Samagata Foundation", logo: samagataCurrent, url: "https://samagata.org/", description: `` },
+  ]
   const outreachPartners = [
     { id: 1, name: "Ravyn Company", logo: ravyn, url: "https://www.ravyncorp.com/", description: `` },
     { id: 2, name: "IEEE Sahrdaya", logo: sahrdaya, url: "https://ieeesahrdaya.com/", description: `` },
@@ -59,6 +66,10 @@ const Sponsors = () => {
     { id: 11, name: "Samagata Foundation", logo: samagata, url: "https://samagata.org" },
   ];
 
+  const coCreators = [
+    { id: 1, name: "Prajaahita Foundation", logo: prajaahita, url: "https://prajaahita.org" },
+  ]
+
   return (
     <div className="sponsors-section">
       <div className="text-holder sponsors-header">
@@ -75,11 +86,11 @@ const Sponsors = () => {
       </div>
 
       <div className="text-holder sponsors-header">
-        <h3>Sponsors</h3>
+        <h3>Co-creators</h3>
       </div>
 
       <div className="container sponsors-container">
-        {sponsors.map((partner) => (
+        {coCreators.map((partner) => (
           <a
             key={partner.id}
             href={partner.url}
@@ -138,21 +149,43 @@ const Sponsors = () => {
       </div>
 
       <div className="text-holder sponsors-header">
-        <h3>Previous Sponsors and Partners</h3>
+        <h3>Prize Sponsor</h3>
       </div>
 
       <div className="container sponsors-container">
-        {previousSponsors.map((sponsor) => (
+        {prizeSponsor.map((partner) => (
           <a
-            key={sponsor.id}
-            href={sponsor.url}
+            key={partner.id}
+            href={partner.url}
             target="_blank"
             rel="noopener noreferrer"
             className="sponsor-card"
           >
             <div className="sponsor-content">
-              <img src={sponsor.logo} alt={`${sponsor.name} logo`} className="sponsor-logo" />
-              <h3 className="sponsor-name">{sponsor.name}</h3>
+              <img src={partner.logo} alt={`${partner.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{partner.name}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+
+
+      <div className="text-holder sponsors-header">
+        <h3>Sponsors</h3>
+      </div>
+
+      <div className="container sponsors-container">
+        {sponsors.map((partner) => (
+          <a
+            key={partner.id}
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-card"
+          >
+            <div className="sponsor-content">
+              <img src={partner.logo} alt={`${partner.name} logo`} className="sponsor-logo" />
+              <h3 className="sponsor-name">{partner.name}</h3>
             </div>
           </a>
         ))}
